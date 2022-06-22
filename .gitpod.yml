@@ -1,11 +1,10 @@
 image: gitpod/workspace-dotnet
----
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - name : Working terminal
     command: echo "Working terminal"
   - name: Init for dotnet
-    init: cd "WebApi/" # runs during prebuild
+    init: cd "WebApi/"  && dotnet restore # runs during prebuild
     command: dotnet run
     openMode: split-right
 
