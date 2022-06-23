@@ -10,6 +10,17 @@
     <div id="timeStamp"></div>
 
 <script>
+    async function getTimeStamp()
+    {
+        const url = await (await fetch('url.txt')).text();
+        const timeStamp = await (await fetch(url+"/time")).json();
+        var elem = document.querySelector('#timeStamp');
+        // Get HTML content
+        var html = elem.innerHTML;
+        // Set HTML content
+        elem.innerHTML = timeStamp;   
+    }
+    getTimeStamp();
 </script>
 
 </body>
