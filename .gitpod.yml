@@ -3,6 +3,10 @@ image: gitpod/workspace-full
 tasks:
   - name: Working terminal
     command: echo "Working terminal"
+  - name: Init backend api
+    init: docker load -i webapi.tar # runs during prebuild
+    command: docker run -it -p 3000:3000 webapi
+    openMode: split-right
 
 ports:
   - port: 3000
