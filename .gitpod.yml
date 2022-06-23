@@ -1,9 +1,8 @@
 image: gitpod/workspace-full
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name : Working terminal
+  - name: Working terminal
     command: echo "Working terminal"
-
 
 ports:
   - port: 3000
@@ -12,3 +11,4 @@ ports:
 vscode:
   extensions:
     - eamodio.gitlens
+    - ms-azuretools.vscode-docker
