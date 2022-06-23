@@ -3,10 +3,7 @@ image: gitpod/workspace-full
 tasks:
   - name : Working terminal
     command: echo "Working terminal"
-  - name: Init for dotnet
-    init: cd "WebApi/"  && dotnet restore # runs during prebuild
-    command: dotnet run
-    openMode: split-right
+
 
 ports:
   - port: 3000
@@ -14,5 +11,4 @@ ports:
 
 vscode:
   extensions:
-    - muhammad-sammy.csharp
     - eamodio.gitlens
