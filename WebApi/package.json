@@ -1,0 +1,10 @@
+{
+    "name": "webapi",
+    "version": "1.0.0",
+    "description": "web api to be dockerized",
+    "main": "app.js",
+    "dependencies": {
+        "express": "^4.18.1",
+        "express-generator": "^4.16.1"
+    }
+}
