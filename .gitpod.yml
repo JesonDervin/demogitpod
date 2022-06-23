@@ -9,10 +9,10 @@ tasks:
     openMode: split-right
   - name: Get backend dynamic url
     command: gp url 3000 > WebApp/url.txt
-  - name: Init front end
-    init: cd WebApp
-    command: python -m http.server 3001
-    openMode: split-right
+#   - name: Init front end
+#     init: cd WebApp
+#     command: python -m http.server 3001
+#     openMode: split-right
 ports:
   - port: 3000
     onOpen: open-preview
