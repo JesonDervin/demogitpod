@@ -7,20 +7,20 @@
 </head>
 <body>
 	<h1>Best WebApp</h1>
+    <Button onclick="getTimeStamp()">getTimeStamp from server</Button>
     <div id="timeStamp"></div>
 
 <script>
     async function getTimeStamp()
     {
         const url = await (await fetch('url.txt')).text();
-        const timeStamp = await (await fetch(url+"/time")).json();
+        const timeStamp = await (await fetch(url)).json();
         var elem = document.querySelector('#timeStamp');
         // Get HTML content
         var html = elem.innerHTML;
         // Set HTML content
-        elem.innerHTML = timeStamp;   
+        elem.innerHTML = timeStamp.servertime;   
     }
-    getTimeStamp();
 </script>
 
 </body>
